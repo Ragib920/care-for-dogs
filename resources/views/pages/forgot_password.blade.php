@@ -13,26 +13,35 @@
     =====================================================-->
     <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <img src="{{ asset('frontend/images/logo.png')}}"
+            <a class="navbar-brand" href="{{ url('/')}}"> <img src="{{ asset('frontend/images/logo.png')}}"
              class="img-responsive" alt="Responsive image"
-              height="35" />
+              height="35" /> </a>
             <button class="navbar-toggler navbar-toggler-right" type="button"
             data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('/')}}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/')}}">About</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('recent_activities')}}">Recent Activities</a>
                     </li>
                     <li class="nav-item" >
-                        <a class="nav-link" href="{{ url('signin')}}">sigh in</a>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sign in
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url('signin')}}">As a Donor</a>
+                                <a class="dropdown-item" href="{{ url('signin')}}">As a Volunteer</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -47,7 +56,7 @@
 
                 <div class="col-md-4">
                     <div class="d-flex justify-content-center pt-4">
-                        <img src="images/logo2.png" class="img-fluid"  alt="Responsive image">
+                    <img src="{{ asset('frontend/images/logo2.png')}}" class="img-fluid"  alt="Responsive image">       
                     </div>
                     <div class="wrapper border">
                         <form class="form-signin border p-3 clearfix">

@@ -13,26 +13,48 @@
     =====================================================-->
     <nav class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <img src="{{ asset('frontend/images/logo.png')}}"
+            <a class="navbar-brand" href="{{ url('/')}}"> <img src="{{ asset('frontend/images/logo.png')}}"
              class="img-responsive" alt="Responsive image"
-              height="35" />
+              height="35" /> </a>
+            
             <button class="navbar-toggler navbar-toggler-right" type="button"
             data-toggle="collapse" data-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('/')}}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/')}}">About</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('recent_activities')}}">Recent Activities</a>
+                        <a class="nav-link" href="{{ url('recent_activities')}}">Check in points</a>
                     </li>
                     <li class="nav-item" >
-                        <a class="nav-link" href="{{ url('signin')}}">sigh in</a>
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sign in
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url('login')}}">As a Donor</a>
+                                <a class="dropdown-item" href="{{ url('volunteer_login')}}">As a Volunteer</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item" >
+                        <div class="dropdown show">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sign up
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="{{ url('donor/signup')}}">As a Donor</a>
+                                <a class="dropdown-item" href="{{ url('volunteer/signup')}}">As a Volunteer</a>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -47,7 +69,7 @@
             <p> Care For Dogs </p>
             <h3> The best thing you can do in this world is save a life..</h3>
             <form method="get" action="#">
-                <button type="submit" class="button">Join with us</button>
+                <!-- <a class="button" href="{{ url('signup')}}">Join with us</a> -->
             </form>
             <h4>The more they will get love the more they will show their loyalty.</h4>
         </div>
@@ -91,7 +113,7 @@
                       </div>
                 </div>
                 <div class="col-md-4 ">
-                   <p class="text-secondary text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop  or lipsum as it is sometimes known, is dummy . The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled </p>
+                   <p class="text-secondary text-justify pt-3"> Specially in our city of Dhaka, there are many helpless dogs on the streets. For lack of proper food, they have to rely on the food thrown by Dustin. Not only that, sometimes he attacks people for food. Their behavior is getting worse day by day due to lack of adequate food. Violence is increasing day by day. Due to which we are accepting various difficulties.In this epidemic of 2020, the condition of dogs has become more miserable. Lack of food is losing their behavioral characteristics. Either dying for lack of food or becoming violent. We should come forward to save the dogs of the city. Extending a hand of sympathy to them. We can make them dirty. </p>
                 </div>
               </div>
         </div>
@@ -106,21 +128,23 @@
                 <p class=" font-weight-bold text-center h3" >What we want to do for stray dogs? </p>
                 <p>And how we do?</p>
                 <div>
-                    <P class="pt-5 h4">Lorem Ipsum is simply dummy text of the printing and typesetting industry</P>
-                    <p class="pt-2 h5">typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum  specimen book.</p>
-                    <p class="pt-2 pb-5 "> It has survived not only five centuries</p>
+                    <P class="text-secondary pt-5 h4">We have mention some area to collect foods for dogs.You have to just post a food donatin request.Our volunteer find your through your location and collect the Food</P>
+                    <p class="text-secondary pt-2 h5">tAfter collecting minimum foods ,we have some several check points to distributr them among the dogs on several two or three times in a day.</p>
+                    <p class="text-secondary  pt-2 pb-5 ">The more they will get love the more they will show their loyalty</p>
                 </div>
             </div>
             <div class="row" >
                 <div class="col-md-4 ">
-                   <p class="text-secondary text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It rised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop Lorem ipsum, or lipsum as it is sometimes known, is dummy . The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum  specimen book. </p>
+                   <p class="text-secondary text-justify pt-3"> Specially in our city of Dhaka, there are many helpless dogs on the streets. For lack of proper food, they have to rely on the food thrown by Dustin. Not only that, sometimes he attacks people for food. </p>
+                   <p class="text-secondary text-justify pt-2"> Their behavior is getting worse day by day due to lack of adequate food. Violence is increasing day by day. Due to which we are accepting various difficulties.</p>
+                   <p class="text-secondary text-justify pt-2">In this epidemic of 2020, the condition of dogs has become more miserable. Lack of food is losing their behavioral characteristics. Either dying for lack of food or becoming violent. We should come forward to save the dogs of the city. Extending a hand of sympathy to them. We can make them dirty </p>
                 </div>
                 <div class="col-md-4 p-3" >
                     <div class="card">
                         <img class="card-img-top" src="{{ asset('frontend/images/card1.jpg')}}" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Collecting Food</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">We have mention some area to collect foods for dogs.You have to just post a food donatin request.Our volunteer find your through your location and collect the Food.</p>
                         </div>
                     </div>
                 </div>
@@ -129,7 +153,7 @@
                         <img class="card-img-top" src="{{ asset('frontend/images/card2.jpg')}}" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title">Distributing  Food</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">After collecting minimum foods ,we have some several check points to distributr them among the dogs on several two or three times in a day.</p>
                         </div>
                     </div>
                 </div>
@@ -232,7 +256,7 @@
                     <p>Pages</p>
                     <a class="nav-link" href="{{ url('/')}}">Home</a>
                     <a class="nav-link" href="{{ url('/')}}">About</a>
-                    <a class="nav-link" href="{{ url('recent_activities')}}">Recent Activities</a>
+                    <a class="nav-link" href="{{ url('recent_activities')}}">Chech in points</a>
                 </div>
                 <div class="col-md-2 ml-5">
                     <p>Social Media Links</p><br>

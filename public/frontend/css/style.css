@@ -70,6 +70,11 @@
     background-size: cover;
     height: 300px;
     opacity: 0.5;
+    transition: transform .3s;
+}
+.targeted-area .container .banner:hover{
+    transform: scale(1.1);
+    opacity: 0.5;
 }
 /* comment section html part start */
 .comment .container{
